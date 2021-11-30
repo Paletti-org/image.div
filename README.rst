@@ -11,14 +11,18 @@ for this project.
 
 Screenshot 1: An image made from 7,985 html divs.
 
-Naturally, this is very inefficient. The example file (`example.jpg`) comes in original 
+Naturally, this is very inefficient. The example file (``example.png``) comes in original 
 gameboy color resolution, 160x144, and has a size of 23kb. The output 
 html and css blow that up to 362kb! And this is after two optimizations: After 
 noticing huge css files in the first version, I changed it so that repeated colors
 use the same css id (which is basically palette indexing). Secondly, when horizontally
 neighbouring pixels are equal, I changed it to stretch the div instead of using
-single divs with the same color value. That's the reason the exmaple has only
+single divs with the same color value. That's the reason the example has only
 7,985 divs instead of (160x144 = )  23,040.
+Still, this does not work well with bigger images. ``example2.png`` has a 
+geometry of 512x512 pixels and already takes a good while for my Firefox to render.
+I tried converting a wallpaper (1920x1080), but upon seeing the .html file size 
+of 650Mb I didn't even try to open it. 
 
 Pro's:
  - can't copy
